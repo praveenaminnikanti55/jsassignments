@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="UTF-8">
+<title>sliders</title>
+
+    </head>
+    <script>
+           
+        var i=0;
+        var images=[];
+        var time =3000;
+        images[0] = "amerfort.jpg";
+        images[1] = "gateway.jpg";
+        images[2] = "goa.jpg";
+        images[3] = "jaisalmer.jpg";
+        images[4] = "redfort.jpg";
+        
+        function slideImg() {
+            document.slide.src=images[i];
+            if(i < images.length-1){
+                i++;
+            }
+            else{
+                i=0;
+            }
+             setTimeout("slideImg()",time);
+        }
+         window.onload=slideImg;
+
+           
+            
+                </script>
+    <body>
+       
+        <img name="slide" width="600" height="400" >
+       
+                
+                     
+        </html>

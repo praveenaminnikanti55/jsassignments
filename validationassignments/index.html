@@ -1,0 +1,126 @@
+<!DOCTYPE html><!-- dtd path : document type definition -->
+<html>
+    <head>
+        <title>RegistrationForm</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="put imp words from ur webpage" >
+        <meta name="author" content="put name of author">
+        <meta name="description" content="put short descr">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- explore more meta tags on your own-->
+        <style>
+           
+            *{
+                box-sizing:border-box;
+            }
+            body{
+                background-color:#9b59b6;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                min-height:100vh;
+                margin:0;
+            }
+            .container{
+                background-color:#fff;
+                border-radius:5px;
+                box-shadow:0px 2px 5px rgba(0,0,0,0.3);
+                width:400px;
+                max-width:100%;
+            }
+            .header{
+                
+                background-color:#f7f7f7;
+                border-bottom:1px solid #f0f0f0;
+                padding:20px 40px;
+            }
+            .header h2{
+                margin:0;
+            }
+            .form{
+                padding:30px 40px;
+            }
+            .form-control{
+                margin-bottom:10px;
+                padding-bottom:10px;
+                position:relative;
+            }
+            .form-control label{
+                display:inline-block;
+                margin-bottom:5px;
+            }
+            .form-control input{
+                border:2px solid #f0f0f0;
+                border-radius:4px;
+                display:block;
+                font-family:inherit;
+                font-size:14px;
+                padding:10px;
+            }
+            .form button{
+                background-color:#8e44ad;
+                border:2px solid #8e44ad;
+                color:#fff;
+                display:block;
+                font-family:inherit;
+                font-size:16px;
+                padding:10px;
+                width:100%;
+            }
+            .error{
+                color: red;
+            }
+
+            
+  
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h2>Login Form</h2>
+            </div>
+            <!-- <form action="sucess.html"  onsubmit="return validateForm()"   novalidate> -->
+            <form action="sucess.html" class="form" id="form" onsubmit="return validateForm()"   novalidate>
+                <div class="form-control">
+            <label>Username</label>
+            <input type="text" placeholder="Enter Name"  id="fname"  name="myname" onblur="validate1()">
+            <small id="error1" class="error"></small>
+
+        </div>
+        
+        <div class="form-control">
+            <label>password</label>
+            <input type="password" placeholder="Enter Password" id="pass"  name="password" onblur="validate2()">
+            <small id="error2" class="error"></small>
+   
+           </div>
+          <div class="form-control">
+            <label>confirm password</label>
+            <input type="password" placeholder="Enter Confirmpassword"  id="cpass"  name="cpassword" onblur="validate3()">
+            <small id="error3" class="error"></small>
+   
+           </div>
+           <div class="form-control">
+            <label>Email</label>
+            <input type="email" placeholder="Enter Email" id="email"  name="email" onblur="validate4()">
+            <small id="error4" class="error"></small>
+   
+           </div>
+           <div class="form-control">
+            <label>Mobile</label>
+            <input type="mobile" placeholder="Enter MobileNo" id="mobile"  name="mobile" onblur="validate5()">
+            <small id="error5" class="error"></small>
+   
+           </div>
+           <button>Submit</button>
+
+
+            </form>
+        </div>
+
+
+        </body>
+        
+        <script src="validation.js"></script>
+</html>
